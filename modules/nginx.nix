@@ -80,7 +80,7 @@ in
         })
 
         (lib.mkIf cfg.setHSTSHeader {
-          commonServerConfig = /* nginx */ ''
+          commonHttpConfig = /* nginx */ ''
             more_set_headers "Strict-Transport-Security: max-age=63072000; includeSubDomains; preload";
           '';
         })
